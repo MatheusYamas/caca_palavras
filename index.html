@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <title>Caça-Palavras</title>
+</head>
+<body>
+    <script>
+        matriz = new Array;
+        matriz = 
+        [
+            ["B","R","A","S","I","L","","","","","","","","","U"],
+            ["","","","","","","","","","","","","","","G"],
+            ["","","","S","E","N","E","G","A","L","","","","","A"],
+            ["","","","","","","S","","","","","","","","N"],
+            ["","","","A","","","T","","","","A","","","","D"],
+            ["","","","Z","","","A","","M","A","L","Á","S","I","A"],
+            ["","","","E","","","D","","","","E","","","",""],
+            ["","","","R","","","O","","","","M","","","",""],
+            ["","","","B","","","S","","E","","A","","","",""],
+            ["J","","","A","","","U","","T","","N","","","",""],
+            ["A","","","I","","","N","","Ó","","H","","","",""],
+            ["P","","","J","","","I","","P","","A","","","",""],
+            ["Ã","","","Ã","","","D","","I","","","","","",""],
+            ["O","","","O","","","O","","A","","","","","",""],
+            ["","","","","","","S","R","Ú","S","S","I","A","",""],
+        ];
+
+        window.onload = function()
+        {
+            for(let node of document.querySelectorAll("td"))
+            {
+                if(node.textContent != "")
+                {
+                    node.className = "selected";
+                }
+                else
+                {
+                    let charcode = Math.round(65 + Math.random() * 25)
+                    node.textContent = String.fromCharCode(charcode)
+                }
+            }
+        }
+
+        document.write("<h2>Caça-Palavras sobre países joias</h2>" + 
+        "<table border='2' align='center'>");
+        for (linha = 0; linha < 15; linha++)
+        {
+            document.write("<tr>")
+            for(coluna = 0; coluna < 15; coluna++)
+            {
+                document.write("<td>" + matriz[linha][coluna] + "</td>");
+            }
+            document.write("</tr>");
+        }
+        document.write("</table>")
+    </script>
+</body>
+</html>

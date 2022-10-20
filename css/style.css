@@ -1,0 +1,29 @@
+html{
+    background-color: #2e2e2e;
+
+}
+
+body{
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-size: 25px;
+    font-family:'Times New Roman', Times, serif;
+}
+h1{
+    font-size: 30px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+table{
+    border-collapse: collapse;
+}
+td{
+    text-align: center;
+    border: 2px solid black;
+    width: 40px;
+    height: 40px;
+    background-color: #2e2e2e;
+}
+td.selected{
+    background-color: #0f2e70;
+}
